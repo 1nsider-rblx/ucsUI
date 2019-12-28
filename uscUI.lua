@@ -36,6 +36,7 @@ local left = Instance.new("Frame")
 local right = Instance.new("Frame")
 
 ClientsidedUUI.Name = "ClientsidedUUI"
+ClientsidedUUI.ResetOnSpawn = false
 ClientsidedUUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 top.Name = "top"
