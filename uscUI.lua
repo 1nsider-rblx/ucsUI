@@ -35,8 +35,6 @@ local TextLabel_6 = Instance.new("TextLabel")
 local left = Instance.new("Frame")
 local right = Instance.new("Frame")
 
---Properties:
-
 ClientsidedUUI.Name = "ClientsidedUUI"
 ClientsidedUUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
@@ -346,7 +344,7 @@ grav.BackgroundColor3 = Color3.fromRGB(255, 255, 134)
 grav.Position = UDim2.new(0.547275662, 0, 0.577137351, 0)
 grav.Size = UDim2.new(0, 79, 0, 51)
 grav.Font = Enum.Font.SourceSans
-grav.Text = "Toggle Gravity"
+grav.Text = "Toggle Zero Gravity"
 grav.TextColor3 = Color3.fromRGB(0, 0, 0)
 grav.TextSize = 15.000
 grav.TextWrapped = true
