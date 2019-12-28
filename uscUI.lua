@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.1
-
--- Instances:
-
 local ClientsidedUUI = Instance.new("ScreenGui")
 local top = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
@@ -39,7 +34,6 @@ local TextLabel_6 = Instance.new("TextLabel")
 local left = Instance.new("Frame")
 local right = Instance.new("Frame")
 
---Properties:
 
 ClientsidedUUI.Name = "ClientsidedUUI"
 ClientsidedUUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -384,7 +378,6 @@ right.Rotation = 20.000
 right.Size = UDim2.new(0, 920, 0, 1000)
 right.Visible = false
 
--- Scripts:
 
 local function ZEXJI_fake_script() -- ws.LocalScript 
 	local script = Instance.new('LocalScript', ws)
