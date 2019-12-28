@@ -1,2 +1,4 @@
 # ucsUI
-Universal Client-sided UI
+the Universal Client-sided UI
+developed by 1nsider
+built for Roblox
