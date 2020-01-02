@@ -1,3 +1,8 @@
+-- Gui to Lua
+-- Version: 3.1
+
+-- Instances:
+
 local ClientsidedUUI = Instance.new("ScreenGui")
 local top = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
@@ -35,9 +40,11 @@ local TextLabel_6 = Instance.new("TextLabel")
 local left = Instance.new("Frame")
 local right = Instance.new("Frame")
 
+--Properties:
+
 ClientsidedUUI.Name = "ClientsidedUUI"
-ClientsidedUUI.ResetOnSpawn = false
 ClientsidedUUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ClientsidedUUI.ResetOnSpawn = false
 
 top.Name = "top"
 top.Parent = ClientsidedUUI
@@ -220,7 +227,7 @@ freeze.BackgroundColor3 = Color3.fromRGB(255, 255, 134)
 freeze.Position = UDim2.new(0.0370794535, 0, 0.119261906, 0)
 freeze.Size = UDim2.new(0, 79, 0, 51)
 freeze.Font = Enum.Font.SourceSans
-freeze.Text = "Toggle Freeze (HRP)"
+freeze.Text = "Toggle Freeze"
 freeze.TextColor3 = Color3.fromRGB(0, 0, 0)
 freeze.TextSize = 15.000
 freeze.TextWrapped = true
@@ -345,14 +352,14 @@ grav.BackgroundColor3 = Color3.fromRGB(255, 255, 134)
 grav.Position = UDim2.new(0.547275662, 0, 0.577137351, 0)
 grav.Size = UDim2.new(0, 79, 0, 51)
 grav.Font = Enum.Font.SourceSans
-grav.Text = "Toggle Zero Gravity"
+grav.Text = "Toggle Gravity"
 grav.TextColor3 = Color3.fromRGB(0, 0, 0)
 grav.TextSize = 15.000
 grav.TextWrapped = true
 
-TextBox.Parent = top
+TextBox.Parent = body
 TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextBox.Position = UDim2.new(0.653266311, 0, 10, 0)
+TextBox.Position = UDim2.new(0.653266311, 0, 0.829971194, 0)
 TextBox.Size = UDim2.new(0, 200, 0, 50)
 TextBox.ClearTextOnFocus = false
 TextBox.Font = Enum.Font.SourceSans
@@ -392,7 +399,7 @@ right.Visible = false
 
 -- Scripts:
 
-local function HKTQ_fake_script() -- ws.LocalScript 
+local function ZMZTDLP_fake_script() -- ws.LocalScript 
 	local script = Instance.new('LocalScript', ws)
 
 	script.Parent.Activated:Connect(function()
@@ -401,8 +408,8 @@ local function HKTQ_fake_script() -- ws.LocalScript
 		lp.Character.Humanoid.WalkSpeed = input.Text
 	end)
 end
-coroutine.wrap(HKTQ_fake_script)()
-local function VMCUZ_fake_script() -- jp.LocalScript 
+coroutine.wrap(ZMZTDLP_fake_script)()
+local function JPRXDVY_fake_script() -- jp.LocalScript 
 	local script = Instance.new('LocalScript', jp)
 
 	script.Parent.Activated:Connect(function()
@@ -411,8 +418,8 @@ local function VMCUZ_fake_script() -- jp.LocalScript
 		lp.Character.Humanoid.JumpPower = input.Text
 	end)
 end
-coroutine.wrap(VMCUZ_fake_script)()
-local function NCSWB_fake_script() -- hp.LocalScript 
+coroutine.wrap(JPRXDVY_fake_script)()
+local function EKJTJPG_fake_script() -- hp.LocalScript 
 	local script = Instance.new('LocalScript', hp)
 
 	script.Parent.Activated:Connect(function()
@@ -422,8 +429,8 @@ local function NCSWB_fake_script() -- hp.LocalScript
 		lp.Character.Humanoid.Health = input.Text
 	end)
 end
-coroutine.wrap(NCSWB_fake_script)()
-local function SCZFC_fake_script() -- sit.LocalScript 
+coroutine.wrap(EKJTJPG_fake_script)()
+local function SUBQBP_fake_script() -- sit.LocalScript 
 	local script = Instance.new('LocalScript', sit)
 
 	script.Parent.Activated:Connect(function()
@@ -432,8 +439,8 @@ local function SCZFC_fake_script() -- sit.LocalScript
 		lp.Character.Humanoid.Sit = true
 	end)
 end
-coroutine.wrap(SCZFC_fake_script)()
-local function OSBAF_fake_script() -- stone.LocalScript 
+coroutine.wrap(SUBQBP_fake_script)()
+local function DDOOQI_fake_script() -- stone.LocalScript 
 	local script = Instance.new('LocalScript', stone)
 
 	script.Parent.Activated:Connect(function()
@@ -442,8 +449,8 @@ local function OSBAF_fake_script() -- stone.LocalScript
 		lp.Character.Humanoid:Destroy()
 	end)
 end
-coroutine.wrap(OSBAF_fake_script)()
-local function FVTAU_fake_script() -- bps.LocalScript 
+coroutine.wrap(DDOOQI_fake_script)()
+local function YAGR_fake_script() -- bps.LocalScript 
 	local script = Instance.new('LocalScript', bps)
 
 	script.Parent.Activated:Connect(function()
@@ -460,8 +467,8 @@ local function FVTAU_fake_script() -- bps.LocalScript
 	end
 	end)
 end
-coroutine.wrap(FVTAU_fake_script)()
-local function JRQJL_fake_script() -- removeacs.LocalScript 
+coroutine.wrap(YAGR_fake_script)()
+local function RSEGUM_fake_script() -- removeacs.LocalScript 
 	local script = Instance.new('LocalScript', removeacs)
 
 	script.Parent.Activated:Connect(function()
@@ -470,8 +477,8 @@ local function JRQJL_fake_script() -- removeacs.LocalScript
 		lp.Character.Humanoid:RemoveAccessories()
 	end)
 end
-coroutine.wrap(JRQJL_fake_script)()
-local function ACVJWQ_fake_script() -- dplayer.LocalScript 
+coroutine.wrap(RSEGUM_fake_script)()
+local function CIRBEDM_fake_script() -- dplayer.LocalScript 
 	local script = Instance.new('LocalScript', dplayer)
 
 	script.Parent.Activated:Connect(function()
@@ -480,8 +487,8 @@ local function ACVJWQ_fake_script() -- dplayer.LocalScript
 		lp:Destroy()
 	end)
 end
-coroutine.wrap(ACVJWQ_fake_script)()
-local function DKRYN_fake_script() -- delbp.LocalScript 
+coroutine.wrap(CIRBEDM_fake_script)()
+local function ZCWXXYU_fake_script() -- delbp.LocalScript 
 	local script = Instance.new('LocalScript', delbp)
 
 	script.Parent.Activated:Connect(function()
@@ -490,8 +497,8 @@ local function DKRYN_fake_script() -- delbp.LocalScript
 		lp.Backpack:ClearAllChildren()
 	end)
 end
-coroutine.wrap(DKRYN_fake_script)()
-local function OAUV_fake_script() -- dgui.LocalScript 
+coroutine.wrap(ZCWXXYU_fake_script)()
+local function TDYYQTB_fake_script() -- dgui.LocalScript 
 	local script = Instance.new('LocalScript', dgui)
 
 	script.Parent.Activated:Connect(function()
@@ -500,8 +507,8 @@ local function OAUV_fake_script() -- dgui.LocalScript
 		lp.PlayerGui.ClientsidedUUI:Destroy()
 	end)
 end
-coroutine.wrap(OAUV_fake_script)()
-local function IZYM_fake_script() -- freeze.LocalScript 
+coroutine.wrap(TDYYQTB_fake_script)()
+local function FAAZO_fake_script() -- freeze.LocalScript 
 	local script = Instance.new('LocalScript', freeze)
 
 	script.Parent.Activated:Connect(function()
@@ -514,8 +521,8 @@ local function IZYM_fake_script() -- freeze.LocalScript
 		end
 	end)
 end
-coroutine.wrap(IZYM_fake_script)()
-local function MEQSEDF_fake_script() -- dispr.LocalScript 
+coroutine.wrap(FAAZO_fake_script)()
+local function PWEFY_fake_script() -- dispr.LocalScript 
 	local script = Instance.new('LocalScript', dispr)
 
 	script.Parent.Activated:Connect(function()
@@ -524,8 +531,8 @@ local function MEQSEDF_fake_script() -- dispr.LocalScript
 		lp.Character:Destroy()
 	end)
 end
-coroutine.wrap(MEQSEDF_fake_script)()
-local function IVHS_fake_script() -- dbpc.LocalScript 
+coroutine.wrap(PWEFY_fake_script)()
+local function IXKVPGV_fake_script() -- dbpc.LocalScript 
 	local script = Instance.new('LocalScript', dbpc)
 
 	script.Parent.Activated:Connect(function()
@@ -534,8 +541,8 @@ local function IVHS_fake_script() -- dbpc.LocalScript
 		lp.Character:FindFirstChild(input.Text):Destroy()
 	end)
 end
-coroutine.wrap(IVHS_fake_script)()
-local function ODBFSS_fake_script() -- plate.LocalScript 
+coroutine.wrap(IXKVPGV_fake_script)()
+local function ETWQHT_fake_script() -- plate.LocalScript 
 	local script = Instance.new('LocalScript', plate)
 
 	script.Parent.Activated:Connect(function()
@@ -551,8 +558,8 @@ local function ODBFSS_fake_script() -- plate.LocalScript
 		plate.Material = "SmoothPlastic"
 	end)
 end
-coroutine.wrap(ODBFSS_fake_script)()
-local function LMMSCH_fake_script() -- clone.LocalScript 
+coroutine.wrap(ETWQHT_fake_script)()
+local function LOKTTVJ_fake_script() -- clone.LocalScript 
 	local script = Instance.new('LocalScript', clone)
 
 	script.Parent.Activated:Connect(function()
@@ -563,8 +570,8 @@ local function LMMSCH_fake_script() -- clone.LocalScript
 		clone.Name = clone.Name.. "-clone"
 	end)
 end
-coroutine.wrap(LMMSCH_fake_script)()
-local function PUCHVL_fake_script() -- btools.LocalScript 
+coroutine.wrap(LOKTTVJ_fake_script)()
+local function GUKZWNS_fake_script() -- btools.LocalScript 
 	local script = Instance.new('LocalScript', btools)
 
 	script.Parent.Activated:Connect(function()
@@ -591,8 +598,8 @@ local function PUCHVL_fake_script() -- btools.LocalScript
 		
 	end)
 end
-coroutine.wrap(PUCHVL_fake_script)()
-local function VYOIWXZ_fake_script() -- tp.LocalScript 
+coroutine.wrap(GUKZWNS_fake_script)()
+local function IRKJ_fake_script() -- tp.LocalScript 
 	local script = Instance.new('LocalScript', tp)
 
 	script.Parent.Activated:Connect(function()
@@ -601,8 +608,8 @@ local function VYOIWXZ_fake_script() -- tp.LocalScript
 		lp.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace[input.Text].HumanoidRootPart.Position)
 	end)
 end
-coroutine.wrap(VYOIWXZ_fake_script)()
-local function YQRFOIW_fake_script() -- tpp.LocalScript 
+coroutine.wrap(IRKJ_fake_script)()
+local function MYBOUTF_fake_script() -- tpp.LocalScript 
 	local script = Instance.new('LocalScript', tpp)
 
 	script.Parent.Activated:Connect(function()
@@ -611,8 +618,8 @@ local function YQRFOIW_fake_script() -- tpp.LocalScript
 		lp.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace[input.Text].Position)
 	end)
 end
-coroutine.wrap(YQRFOIW_fake_script)()
-local function CAOVKQ_fake_script() -- infY.LocalScript 
+coroutine.wrap(MYBOUTF_fake_script)()
+local function EQRCM_fake_script() -- infY.LocalScript 
 	local script = Instance.new('LocalScript', infY)
 
 	script.Parent.Activated:Connect(function()
@@ -621,8 +628,8 @@ local function CAOVKQ_fake_script() -- infY.LocalScript
 		loadstring(game:HttpGet(('https://pastebin.com/raw/tzTXmYf2'),true))()
 	end)
 end
-coroutine.wrap(CAOVKQ_fake_script)()
-local function FZUUT_fake_script() -- grav.LocalScript 
+coroutine.wrap(EQRCM_fake_script)()
+local function FCVSX_fake_script() -- grav.LocalScript 
 	local script = Instance.new('LocalScript', grav)
 
 	local gravityOn = true
@@ -639,14 +646,24 @@ local function FZUUT_fake_script() -- grav.LocalScript
 		end
 	end)
 end
-coroutine.wrap(FZUUT_fake_script)()
-local function NCGLW_fake_script() -- top.draggable 
+coroutine.wrap(FCVSX_fake_script)()
+local function YOXJB_fake_script() -- top.draggable 
 	local script = Instance.new('LocalScript', top)
 
 	script.Parent.Draggable = true
+	local player = game.Players.LocalPlayer
+	local mouse = player:GetMouse()
+	local enabledBody = true
+	
+	mouse.KeyDown:connect(function(key)
+	    if key:byte() == 113 then --Since you cannot type [[key == "Space"]] just use byte.
+	        enabledBody = not enabledBody
+			script.Parent.body.Visible = not script.Parent.body.Visible
+	    end
+	end)
 	game.StarterGui:SetCore("SendNotification", {
 	    Title = "ucsUI"; -- Required. Has to be a string!
-	    Text = "Welcome to ucsUI! Made by 1nsider."; -- Required. Has to be a string!
+	    Text = "Welcome to ucsUI! Made by 1nsider. Use Q to hide/unhide UI!"; -- Required. Has to be a string!
 	    Icon = "http://www.roblox.com/asset/?id=4551455643"; -- Optional, defaults to "" (no icon)4551455646
 	    Duration = 30; -- Optional, defaults to 5 seconds
 	    --Callback = bindableFunction; -- Optional, gets invoked with the text of the button the user pressed
@@ -654,4 +671,4 @@ local function NCGLW_fake_script() -- top.draggable
 	    --Button2 = "No"; -- Optional, makes another button appear with the given text that, when clicked, fires the Callback if it's given
 	})
 end
-coroutine.wrap(NCGLW_fake_script)()
+coroutine.wrap(YOXJB_fake_script)()
