@@ -1,3 +1,8 @@
+-- Gui to Lua
+-- Version: 3.1
+
+-- Instances:
+
 local ClientsidedUUI = Instance.new("ScreenGui")
 local top = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
@@ -12,6 +17,9 @@ local infY = Instance.new("TextButton")
 local grav = Instance.new("TextButton")
 local Ugrav = Instance.new("TextButton")
 local hat = Instance.new("TextButton")
+local fling = Instance.new("TextButton")
+local fly = Instance.new("TextButton")
+local force = Instance.new("TextButton")
 local Frame_2 = Instance.new("Frame")
 local ws = Instance.new("TextButton")
 local jp = Instance.new("TextButton")
@@ -33,7 +41,6 @@ local delbp = Instance.new("TextButton")
 local dgui = Instance.new("TextButton")
 local TextLabel_5 = Instance.new("TextLabel")
 local Frame_5 = Instance.new("Frame")
-local fling = Instance.new("TextButton")
 local TextLabel_6 = Instance.new("TextLabel")
 local TextLabel_7 = Instance.new("TextLabel")
 local TextBox = Instance.new("TextBox")
@@ -73,8 +80,8 @@ body.Size = UDim2.new(0, 784, 0, 347)
 
 Frame.Parent = body
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.Position = UDim2.new(0.525715292, 0, 0.0230547562, 0)
-Frame.Size = UDim2.new(0, 200, 0, 273)
+Frame.Position = UDim2.new(0.525715292, 0, 0.0230547544, 0)
+Frame.Size = UDim2.new(0, 360, 0, 273)
 Frame.Style = Enum.FrameStyle.RobloxRound
 
 clone.Name = "clone"
@@ -91,7 +98,7 @@ clone.TextWrapped = true
 TextLabel_2.Parent = Frame
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(57, 70, 191)
 TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.Position = UDim2.new(-0.0203599539, 0, 0.0148828533, 0)
+TextLabel_2.Position = UDim2.new(0.204640046, 0, 0.0185458567, 0)
 TextLabel_2.Size = UDim2.new(0, 196, 0, 20)
 TextLabel_2.Font = Enum.Font.SourceSans
 TextLabel_2.Text = "Workspace/ETC"
@@ -101,7 +108,7 @@ TextLabel_2.TextSize = 20.000
 btools.Name = "btools"
 btools.Parent = Frame
 btools.BackgroundColor3 = Color3.fromRGB(255, 255, 134)
-btools.Position = UDim2.new(0.547275543, 0, 0.137576923, 0)
+btools.Position = UDim2.new(0.319497764, 0, 0.137576923, 0)
 btools.Size = UDim2.new(0, 79, 0, 51)
 btools.Font = Enum.Font.SourceSans
 btools.Text = "BTools (Client)"
@@ -123,7 +130,7 @@ tp.TextWrapped = true
 tpp.Name = "tpp"
 tpp.Parent = Frame
 tpp.BackgroundColor3 = Color3.fromRGB(255, 255, 134)
-tpp.Position = UDim2.new(0.547275603, 0, 0.357357144, 0)
+tpp.Position = UDim2.new(0.319497824, 0, 0.357357144, 0)
 tpp.Size = UDim2.new(0, 79, 0, 51)
 tpp.Font = Enum.Font.SourceSans
 tpp.Text = "TP to Part *"
@@ -145,7 +152,7 @@ infY.TextWrapped = true
 grav.Name = "grav"
 grav.Parent = Frame
 grav.BackgroundColor3 = Color3.fromRGB(255, 255, 134)
-grav.Position = UDim2.new(0.547275662, 0, 0.577137351, 0)
+grav.Position = UDim2.new(0.319497883, 0, 0.577137351, 0)
 grav.Size = UDim2.new(0, 79, 0, 51)
 grav.Font = Enum.Font.SourceSans
 grav.Text = "Toggle Gravity"
@@ -167,13 +174,46 @@ Ugrav.TextWrapped = true
 hat.Name = "hat"
 hat.Parent = Frame
 hat.BackgroundColor3 = Color3.fromRGB(255, 255, 134)
-hat.Position = UDim2.new(0.547275662, 0, 0.793254554, 0)
+hat.Position = UDim2.new(0.319497883, 0, 0.793254554, 0)
 hat.Size = UDim2.new(0, 79, 0, 51)
 hat.Font = Enum.Font.SourceSans
 hat.Text = "Remove Face and Clothes"
 hat.TextColor3 = Color3.fromRGB(0, 0, 0)
 hat.TextSize = 15.000
 hat.TextWrapped = true
+
+fling.Name = "fling"
+fling.Parent = Frame
+fling.BackgroundColor3 = Color3.fromRGB(255, 255, 134)
+fling.Position = UDim2.new(0.595122278, 0, 0.141987666, 0)
+fling.Size = UDim2.new(0, 59, 0, 51)
+fling.Font = Enum.Font.SourceSans
+fling.Text = "Invis Fling"
+fling.TextColor3 = Color3.fromRGB(0, 0, 0)
+fling.TextSize = 15.000
+fling.TextWrapped = true
+
+fly.Name = "fly"
+fly.Parent = Frame
+fly.BackgroundColor3 = Color3.fromRGB(255, 255, 134)
+fly.Position = UDim2.new(0.802029073, 0, 0.141987666, 0)
+fly.Size = UDim2.new(0, 59, 0, 51)
+fly.Font = Enum.Font.SourceSans
+fly.Text = "Fly"
+fly.TextColor3 = Color3.fromRGB(0, 0, 0)
+fly.TextSize = 15.000
+fly.TextWrapped = true
+
+force.Name = "force"
+force.Parent = Frame
+force.BackgroundColor3 = Color3.fromRGB(255, 255, 134)
+force.Position = UDim2.new(0.595000029, 0, 0.358104885, 0)
+force.Size = UDim2.new(0, 59, 0, 51)
+force.Font = Enum.Font.SourceSans
+force.Text = "The Force"
+force.TextColor3 = Color3.fromRGB(0, 0, 0)
+force.TextSize = 15.000
+force.TextWrapped = true
 
 Frame_2.Parent = body
 Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -381,18 +421,8 @@ Frame_5.Parent = body
 Frame_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame_5.Position = UDim2.new(0.796123445, 0, 0.0230547544, 0)
 Frame_5.Size = UDim2.new(0, 149, 0, 273)
+Frame_5.Visible = false
 Frame_5.Style = Enum.FrameStyle.RobloxRound
-
-fling.Name = "fling"
-fling.Parent = Frame_5
-fling.BackgroundColor3 = Color3.fromRGB(255, 255, 134)
-fling.Position = UDim2.new(0.0696579069, 0, 0.138104036, 0)
-fling.Size = UDim2.new(0, 113, 0, 51)
-fling.Font = Enum.Font.SourceSans
-fling.Text = "Invis Fling"
-fling.TextColor3 = Color3.fromRGB(0, 0, 0)
-fling.TextSize = 15.000
-fling.TextWrapped = true
 
 TextLabel_6.Parent = Frame_5
 TextLabel_6.BackgroundColor3 = Color3.fromRGB(57, 70, 191)
@@ -428,7 +458,7 @@ TextBox.TextWrapped = true
 
 -- Scripts:
 
-local function KTFFRY_fake_script() -- clone.LocalScript 
+local function VRUL_fake_script() -- clone.LocalScript 
 	local script = Instance.new('LocalScript', clone)
 
 	script.Parent.Activated:Connect(function()
@@ -439,8 +469,8 @@ local function KTFFRY_fake_script() -- clone.LocalScript
 		clone.Name = clone.Name.. "-clone"
 	end)
 end
-coroutine.wrap(KTFFRY_fake_script)()
-local function BYQTJOA_fake_script() -- btools.LocalScript 
+coroutine.wrap(VRUL_fake_script)()
+local function QENSGFK_fake_script() -- btools.LocalScript 
 	local script = Instance.new('LocalScript', btools)
 
 	script.Parent.Activated:Connect(function()
@@ -467,8 +497,8 @@ local function BYQTJOA_fake_script() -- btools.LocalScript
 		
 	end)
 end
-coroutine.wrap(BYQTJOA_fake_script)()
-local function UTGXTPJ_fake_script() -- tp.LocalScript 
+coroutine.wrap(QENSGFK_fake_script)()
+local function CNWY_fake_script() -- tp.LocalScript 
 	local script = Instance.new('LocalScript', tp)
 
 	script.Parent.Activated:Connect(function()
@@ -477,8 +507,8 @@ local function UTGXTPJ_fake_script() -- tp.LocalScript
 		lp.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace[input.Text].HumanoidRootPart.Position)
 	end)
 end
-coroutine.wrap(UTGXTPJ_fake_script)()
-local function KGMMRM_fake_script() -- tpp.LocalScript 
+coroutine.wrap(CNWY_fake_script)()
+local function NTCD_fake_script() -- tpp.LocalScript 
 	local script = Instance.new('LocalScript', tpp)
 
 	script.Parent.Activated:Connect(function()
@@ -487,8 +517,8 @@ local function KGMMRM_fake_script() -- tpp.LocalScript
 		lp.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace[input.Text].Position)
 	end)
 end
-coroutine.wrap(KGMMRM_fake_script)()
-local function ALQOC_fake_script() -- infY.LocalScript 
+coroutine.wrap(NTCD_fake_script)()
+local function CXKT_fake_script() -- infY.LocalScript 
 	local script = Instance.new('LocalScript', infY)
 
 	script.Parent.Activated:Connect(function()
@@ -497,8 +527,8 @@ local function ALQOC_fake_script() -- infY.LocalScript
 		loadstring(game:HttpGet(('https://pastebin.com/raw/tzTXmYf2'),true))()
 	end)
 end
-coroutine.wrap(ALQOC_fake_script)()
-local function UJVXFLA_fake_script() -- grav.LocalScript 
+coroutine.wrap(CXKT_fake_script)()
+local function MEUW_fake_script() -- grav.LocalScript 
 	local script = Instance.new('LocalScript', grav)
 
 	local gravityOn = true
@@ -515,8 +545,8 @@ local function UJVXFLA_fake_script() -- grav.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UJVXFLA_fake_script)()
-local function FQTV_fake_script() -- Ugrav.LocalScript 
+coroutine.wrap(MEUW_fake_script)()
+local function NGQMQ_fake_script() -- Ugrav.LocalScript 
 	local script = Instance.new('LocalScript', Ugrav)
 
 	--local gravityOn = true
@@ -533,8 +563,8 @@ local function FQTV_fake_script() -- Ugrav.LocalScript
 		--end
 	end)
 end
-coroutine.wrap(FQTV_fake_script)()
-local function MNOJK_fake_script() -- hat.LocalScript 
+coroutine.wrap(NGQMQ_fake_script)()
+local function HIMD_fake_script() -- hat.LocalScript 
 	local script = Instance.new('LocalScript', hat)
 
 	script.Parent.Activated:Connect(function()
@@ -547,168 +577,8 @@ local function MNOJK_fake_script() -- hat.LocalScript
 		--local hat = Instance.new("Accessory", lp.Character)
 	end)
 end
-coroutine.wrap(MNOJK_fake_script)()
-local function ZKGYFFM_fake_script() -- ws.LocalScript 
-	local script = Instance.new('LocalScript', ws)
-
-	script.Parent.Activated:Connect(function()
-		local input = script.Parent.Parent.Parent.Parent.TextBox
-		local lp = game.Players.LocalPlayer
-		lp.Character.Humanoid.WalkSpeed = input.Text
-	end)
-end
-coroutine.wrap(ZKGYFFM_fake_script)()
-local function GGIKZC_fake_script() -- jp.LocalScript 
-	local script = Instance.new('LocalScript', jp)
-
-	script.Parent.Activated:Connect(function()
-		local input = script.Parent.Parent.Parent.Parent.TextBox
-		local lp = game.Players.LocalPlayer
-		lp.Character.Humanoid.JumpPower = input.Text
-	end)
-end
-coroutine.wrap(GGIKZC_fake_script)()
-local function HNKCWYM_fake_script() -- hp.LocalScript 
-	local script = Instance.new('LocalScript', hp)
-
-	script.Parent.Activated:Connect(function()
-		local input = script.Parent.Parent.Parent.Parent.TextBox
-		local lp = game.Players.LocalPlayer
-		lp.Character.Humanoid.MaxHealth = input.Text
-		lp.Character.Humanoid.Health = input.Text
-	end)
-end
-coroutine.wrap(HNKCWYM_fake_script)()
-local function VFTAB_fake_script() -- sit.LocalScript 
-	local script = Instance.new('LocalScript', sit)
-
-	script.Parent.Activated:Connect(function()
-		local input = script.Parent.Parent.Parent.Parent.TextBox
-		local lp = game.Players.LocalPlayer
-		lp.Character.Humanoid.Sit = true
-	end)
-end
-coroutine.wrap(VFTAB_fake_script)()
-local function UGTC_fake_script() -- stone.LocalScript 
-	local script = Instance.new('LocalScript', stone)
-
-	script.Parent.Activated:Connect(function()
-		local input = script.Parent.Parent.Parent.Parent.TextBox
-		local lp = game.Players.LocalPlayer
-		lp.Character.Humanoid:Destroy()
-	end)
-end
-coroutine.wrap(UGTC_fake_script)()
-local function QFDNVV_fake_script() -- freeze.LocalScript 
-	local script = Instance.new('LocalScript', freeze)
-
-	script.Parent.Activated:Connect(function()
-		local input = script.Parent.Parent.Parent.Parent.TextBox
-		local lp = game.Players.LocalPlayer
-		if lp.Character.HumanoidRootPart.Anchored then
-			lp.Character.HumanoidRootPart.Anchored = false
-		else
-			lp.Character.HumanoidRootPart.Anchored = true
-		end
-	end)
-end
-coroutine.wrap(QFDNVV_fake_script)()
-local function OMZW_fake_script() -- dispr.LocalScript 
-	local script = Instance.new('LocalScript', dispr)
-
-	script.Parent.Activated:Connect(function()
-		local input = script.Parent.Parent.Parent.Parent.TextBox
-		local lp = game.Players.LocalPlayer
-		lp.Character:Destroy()
-	end)
-end
-coroutine.wrap(OMZW_fake_script)()
-local function BAZETHP_fake_script() -- dbpc.LocalScript 
-	local script = Instance.new('LocalScript', dbpc)
-
-	script.Parent.Activated:Connect(function()
-		local input = script.Parent.Parent.Parent.Parent.TextBox
-		local lp = game.Players.LocalPlayer
-		lp.Character:FindFirstChild(input.Text):Destroy()
-	end)
-end
-coroutine.wrap(BAZETHP_fake_script)()
-local function NNWPOD_fake_script() -- plate.LocalScript 
-	local script = Instance.new('LocalScript', plate)
-
-	script.Parent.Activated:Connect(function()
-		local input = script.Parent.Parent.Parent.Parent.TextBox
-		local lp = game.Players.LocalPlayer
-		local lpp = lp.Character.HumanoidRootPart.Position
-		local plate = Instance.new("Part")
-		plate.Name = "Plate"
-		plate.Parent = workspace
-		plate.Size = Vector3.new(10,1,10)
-		plate.Position = Vector3.new(lpp.x, lpp.y - 3.5, lpp.z)
-		plate.Anchored = true
-		plate.Material = "SmoothPlastic"
-	end)
-end
-coroutine.wrap(NNWPOD_fake_script)()
-local function ZKAEH_fake_script() -- bps.LocalScript 
-	local script = Instance.new('LocalScript', bps)
-
-	script.Parent.Activated:Connect(function()
-		local input = script.Parent.Parent.Parent.Parent.TextBox
-		local lp = game.Players.LocalPlayer
-		for i,v in pairs(game.Players[input.Text]:GetChildren()) do --Get all children of players
-	    local Backpack = v:FindFirstChild("Backpack",true)
-	    if Backpack ~= nil then  --Check if the child has a backpack
-	        local c = Backpack:GetChildren() --Get the children of the backpack
-	        for i = 1,#c do
-	            c[i]:Clone().Parent = lp.Backpack --Use Destroy method instead
-	        end
-	    end
-	end
-	end)
-end
-coroutine.wrap(ZKAEH_fake_script)()
-local function OYSCHTP_fake_script() -- removeacs.LocalScript 
-	local script = Instance.new('LocalScript', removeacs)
-
-	script.Parent.Activated:Connect(function()
-		local input = script.Parent.Parent.Parent.Parent.TextBox
-		local lp = game.Players.LocalPlayer
-		lp.Character.Humanoid:RemoveAccessories()
-	end)
-end
-coroutine.wrap(OYSCHTP_fake_script)()
-local function VZGBUOB_fake_script() -- dplayer.LocalScript 
-	local script = Instance.new('LocalScript', dplayer)
-
-	script.Parent.Activated:Connect(function()
-		local input = script.Parent.Parent.Parent.Parent.TextBox
-		local lp = game.Players.LocalPlayer
-		lp:Destroy()
-	end)
-end
-coroutine.wrap(VZGBUOB_fake_script)()
-local function ZBHUVD_fake_script() -- delbp.LocalScript 
-	local script = Instance.new('LocalScript', delbp)
-
-	script.Parent.Activated:Connect(function()
-		local input = script.Parent.Parent.Parent.Parent.TextBox
-		local lp = game.Players.LocalPlayer
-		lp.Backpack:ClearAllChildren()
-	end)
-end
-coroutine.wrap(ZBHUVD_fake_script)()
-local function XDJD_fake_script() -- dgui.LocalScript 
-	local script = Instance.new('LocalScript', dgui)
-
-	script.Parent.Activated:Connect(function()
-		local input = script.Parent.Parent.Parent.Parent.TextBox
-		local lp = game.Players.LocalPlayer
-		lp.PlayerGui.ClientsidedUUI:Destroy()
-	end)
-end
-coroutine.wrap(XDJD_fake_script)()
-local function DCOKQVP_fake_script() -- fling.LocalScript 
+coroutine.wrap(HIMD_fake_script)()
+local function AIIV_fake_script() -- fling.LocalScript 
 	local script = Instance.new('LocalScript', fling)
 
 	script.Parent.Activated:Connect(function()
@@ -914,7 +784,7 @@ local function DCOKQVP_fake_script() -- fling.LocalScript
 			
 			spawn(function()
 	local message = Instance.new("Message",workspace)
-	message.Text = "Respawning dont spam!"
+	message.Text = "Respawning dont spam"
 	wait(1)
 	message:Destroy()
 	end)
@@ -949,8 +819,283 @@ local function DCOKQVP_fake_script() -- fling.LocalScript
 	end)
 	end)
 end
-coroutine.wrap(DCOKQVP_fake_script)()
-local function PSALGNA_fake_script() -- top.draggable 
+coroutine.wrap(AIIV_fake_script)()
+local function CYNFK_fake_script() -- fly.LocalScript 
+	local script = Instance.new('LocalScript', fly)
+
+	mouse = game.Players.LocalPlayer:GetMouse()
+	script.Parent.Activated:Connect(function()
+		function Fly()
+			local input = script.Parent.Parent.Parent.Parent.TextBox
+			local lp = game.Players.LocalPlayer
+			local char = lp.Character
+			local torso = char.HumanoidRootPart
+			local maxspeed = 100
+			local speed = 15
+			local flying = true
+			local deb = true
+			ctrl = {f = 0, b = 0, l = 0, r = 0}
+			local lastctrl = {f = 0, b = 0, l = 0, r = 0}
+			local bg = Instance.new("BodyGyro", torso)
+			bg.P = 9e4
+			bg.maxTorque = Vector3.new(0, 0, 0)
+			bg.cframe = torso.CFrame
+			local bv = Instance.new("BodyVelocity", torso)
+			bv.velocity = Vector3.new(0,0,0)
+			bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+			repeat wait()
+			
+			if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
+				speed = speed+.2
+				if speed > maxspeed then
+					speed = maxspeed
+				end
+				elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
+					speed = speed-1
+				if speed < 0 then
+					speed = 0
+				end
+			end
+			if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+				lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
+			elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+			else
+				bv.velocity = Vector3.new(0,0.1,0)
+			end
+			
+			until not flying
+			ctrl = {f = 0, b = 0, l = 0, r = 0}
+			lastctrl = {f = 0, b = 0, l = 0, r = 0}
+			speed = 0
+			bg:Destroy()
+			bv:Destroy()
+			
+			end
+			mouse.KeyDown:connect(function(key)
+			if key:lower() == "e" then
+				if flying then flying = false
+					else
+					flying = true
+					Fly()
+				end
+					elseif key:lower() == "w" then
+					ctrl.f = 3
+					elseif key:lower() == "s" then
+					ctrl.b = -3
+					elseif key:lower() == "a" then
+					ctrl.l = -3
+					elseif key:lower() == "d" then
+					ctrl.r = 3
+				end
+				end)
+				mouse.KeyUp:connect(function(key)
+				if key:lower() == "w" then
+					ctrl.f = 0
+					elseif key:lower() == "s" then
+					ctrl.b = 0
+					elseif key:lower() == "a" then
+					ctrl.l = 0
+					elseif key:lower() == "d" then
+					ctrl.r = 0
+					elseif key:lower() == "r" then
+					
+				end
+			end)
+		Fly()
+	end)
+end
+coroutine.wrap(CYNFK_fake_script)()
+local function SIXX_fake_script() -- force.LocalScript 
+	local script = Instance.new('LocalScript', force)
+
+	originalGravity = workspace.Gravity
+	enabled = false
+	script.Parent.Activated:Connect(function()
+		local input = script.Parent.Parent.Parent.Parent.TextBox
+		local lp = game.Players.LocalPlayer
+		local char = lp.Character
+		local root = char.HumanoidRootPart
+		local gravity = workspace.Gravity
+		
+		if not enabled then
+			local forceDown = Instance.new("BodyForce", root)
+			forceDown.Name = "csuUIforce"
+			forceDown.Force = Vector3.new(0, gravity*-10, 0)
+		
+			workspace.Gravity = 0
+			
+			enabled = true
+		else
+			workspace.Gravity = originalGravity
+			root:FindFirstChild("csuUIforce"):Destroy()
+			enabled = false
+		end
+	end)
+end
+coroutine.wrap(SIXX_fake_script)()
+local function TUEIA_fake_script() -- ws.LocalScript 
+	local script = Instance.new('LocalScript', ws)
+
+	script.Parent.Activated:Connect(function()
+		local input = script.Parent.Parent.Parent.Parent.TextBox
+		local lp = game.Players.LocalPlayer
+		lp.Character.Humanoid.WalkSpeed = input.Text
+	end)
+end
+coroutine.wrap(TUEIA_fake_script)()
+local function GTWRXDV_fake_script() -- jp.LocalScript 
+	local script = Instance.new('LocalScript', jp)
+
+	script.Parent.Activated:Connect(function()
+		local input = script.Parent.Parent.Parent.Parent.TextBox
+		local lp = game.Players.LocalPlayer
+		lp.Character.Humanoid.JumpPower = input.Text
+	end)
+end
+coroutine.wrap(GTWRXDV_fake_script)()
+local function NBBYPHW_fake_script() -- hp.LocalScript 
+	local script = Instance.new('LocalScript', hp)
+
+	script.Parent.Activated:Connect(function()
+		local input = script.Parent.Parent.Parent.Parent.TextBox
+		local lp = game.Players.LocalPlayer
+		lp.Character.Humanoid.MaxHealth = input.Text
+		lp.Character.Humanoid.Health = input.Text
+	end)
+end
+coroutine.wrap(NBBYPHW_fake_script)()
+local function UDHJQ_fake_script() -- sit.LocalScript 
+	local script = Instance.new('LocalScript', sit)
+
+	script.Parent.Activated:Connect(function()
+		local input = script.Parent.Parent.Parent.Parent.TextBox
+		local lp = game.Players.LocalPlayer
+		lp.Character.Humanoid.Sit = true
+	end)
+end
+coroutine.wrap(UDHJQ_fake_script)()
+local function PQTJCY_fake_script() -- stone.LocalScript 
+	local script = Instance.new('LocalScript', stone)
+
+	script.Parent.Activated:Connect(function()
+		local input = script.Parent.Parent.Parent.Parent.TextBox
+		local lp = game.Players.LocalPlayer
+		lp.Character.Humanoid:Destroy()
+	end)
+end
+coroutine.wrap(PQTJCY_fake_script)()
+local function NVQR_fake_script() -- freeze.LocalScript 
+	local script = Instance.new('LocalScript', freeze)
+
+	script.Parent.Activated:Connect(function()
+		local input = script.Parent.Parent.Parent.Parent.TextBox
+		local lp = game.Players.LocalPlayer
+		if lp.Character.HumanoidRootPart.Anchored then
+			lp.Character.HumanoidRootPart.Anchored = false
+		else
+			lp.Character.HumanoidRootPart.Anchored = true
+		end
+	end)
+end
+coroutine.wrap(NVQR_fake_script)()
+local function MHVLNEF_fake_script() -- dispr.LocalScript 
+	local script = Instance.new('LocalScript', dispr)
+
+	script.Parent.Activated:Connect(function()
+		local input = script.Parent.Parent.Parent.Parent.TextBox
+		local lp = game.Players.LocalPlayer
+		lp.Character:Destroy()
+	end)
+end
+coroutine.wrap(MHVLNEF_fake_script)()
+local function VCXVTVR_fake_script() -- dbpc.LocalScript 
+	local script = Instance.new('LocalScript', dbpc)
+
+	script.Parent.Activated:Connect(function()
+		local input = script.Parent.Parent.Parent.Parent.TextBox
+		local lp = game.Players.LocalPlayer
+		lp.Character:FindFirstChild(input.Text):Destroy()
+	end)
+end
+coroutine.wrap(VCXVTVR_fake_script)()
+local function ZOKWMA_fake_script() -- plate.LocalScript 
+	local script = Instance.new('LocalScript', plate)
+
+	script.Parent.Activated:Connect(function()
+		local input = script.Parent.Parent.Parent.Parent.TextBox
+		local lp = game.Players.LocalPlayer
+		local lpp = lp.Character.HumanoidRootPart.Position
+		local plate = Instance.new("Part")
+		plate.Name = "Plate"
+		plate.Parent = workspace
+		plate.Size = Vector3.new(10,1,10)
+		plate.Position = Vector3.new(lpp.x, lpp.y - 3.5, lpp.z)
+		plate.Anchored = true
+		plate.Material = "SmoothPlastic"
+	end)
+end
+coroutine.wrap(ZOKWMA_fake_script)()
+local function IRJOH_fake_script() -- bps.LocalScript 
+	local script = Instance.new('LocalScript', bps)
+
+	script.Parent.Activated:Connect(function()
+		local input = script.Parent.Parent.Parent.Parent.TextBox
+		local lp = game.Players.LocalPlayer
+		for i,v in pairs(game.Players[input.Text]:GetChildren()) do --Get all children of players
+	    local Backpack = v:FindFirstChild("Backpack",true)
+	    if Backpack ~= nil then  --Check if the child has a backpack
+	        local c = Backpack:GetChildren() --Get the children of the backpack
+	        for i = 1,#c do
+	            c[i]:Clone().Parent = lp.Backpack --Use Destroy method instead
+	        end
+	    end
+	end
+	end)
+end
+coroutine.wrap(IRJOH_fake_script)()
+local function MLAIOF_fake_script() -- removeacs.LocalScript 
+	local script = Instance.new('LocalScript', removeacs)
+
+	script.Parent.Activated:Connect(function()
+		local input = script.Parent.Parent.Parent.Parent.TextBox
+		local lp = game.Players.LocalPlayer
+		lp.Character.Humanoid:RemoveAccessories()
+	end)
+end
+coroutine.wrap(MLAIOF_fake_script)()
+local function CGTV_fake_script() -- dplayer.LocalScript 
+	local script = Instance.new('LocalScript', dplayer)
+
+	script.Parent.Activated:Connect(function()
+		local input = script.Parent.Parent.Parent.Parent.TextBox
+		local lp = game.Players.LocalPlayer
+		lp:Destroy()
+	end)
+end
+coroutine.wrap(CGTV_fake_script)()
+local function RKVC_fake_script() -- delbp.LocalScript 
+	local script = Instance.new('LocalScript', delbp)
+
+	script.Parent.Activated:Connect(function()
+		local input = script.Parent.Parent.Parent.Parent.TextBox
+		local lp = game.Players.LocalPlayer
+		lp.Backpack:ClearAllChildren()
+	end)
+end
+coroutine.wrap(RKVC_fake_script)()
+local function ARAGLS_fake_script() -- dgui.LocalScript 
+	local script = Instance.new('LocalScript', dgui)
+
+	script.Parent.Activated:Connect(function()
+		local input = script.Parent.Parent.Parent.Parent.TextBox
+		local lp = game.Players.LocalPlayer
+		lp.PlayerGui.ClientsidedUUI:Destroy()
+	end)
+end
+coroutine.wrap(ARAGLS_fake_script)()
+local function MRQVYZS_fake_script() -- top.draggable 
 	local script = Instance.new('LocalScript', top)
 
 	script.Parent.Draggable = true
@@ -975,4 +1120,4 @@ local function PSALGNA_fake_script() -- top.draggable
 	    --Button2 = "No"; -- Optional, makes another button appear with the given text that, when clicked, fires the Callback if it's given
 	})
 end
-coroutine.wrap(PSALGNA_fake_script)()
+coroutine.wrap(MRQVYZS_fake_script)()
