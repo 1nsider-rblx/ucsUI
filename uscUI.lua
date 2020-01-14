@@ -830,7 +830,7 @@ local function CYNFK_fake_script() -- fly.LocalScript
 			local lp = game.Players.LocalPlayer
 			local char = lp.Character
 			local torso = char.HumanoidRootPart
-			local maxspeed = 100
+			local maxspeed = 160
 			local speed = 15
 			local flying = true
 			local deb = true
