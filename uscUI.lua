@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.1
-
--- Instances:
-
 local ClientsidedUUI = Instance.new("ScreenGui")
 local top = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
@@ -20,6 +15,7 @@ local hat = Instance.new("TextButton")
 local fling = Instance.new("TextButton")
 local fly = Instance.new("TextButton")
 local force = Instance.new("TextButton")
+local fov = Instance.new("TextButton")
 local Frame_2 = Instance.new("Frame")
 local ws = Instance.new("TextButton")
 local jp = Instance.new("TextButton")
@@ -214,6 +210,17 @@ force.Text = "The Force"
 force.TextColor3 = Color3.fromRGB(0, 0, 0)
 force.TextSize = 15.000
 force.TextWrapped = true
+
+fov.Name = "fov"
+fov.Parent = Frame
+fov.BackgroundColor3 = Color3.fromRGB(255, 255, 134)
+fov.Position = UDim2.new(0.801999986, 0, 0.357663006, 0)
+fov.Size = UDim2.new(0, 59, 0, 51)
+fov.Font = Enum.Font.SourceSans
+fov.Text = "Toggle FOV *"
+fov.TextColor3 = Color3.fromRGB(0, 0, 0)
+fov.TextSize = 15.000
+fov.TextWrapped = true
 
 Frame_2.Parent = body
 Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -458,7 +465,7 @@ TextBox.TextWrapped = true
 
 -- Scripts:
 
-local function VRUL_fake_script() -- clone.LocalScript 
+local function CUYCRBU_fake_script() -- clone.LocalScript 
 	local script = Instance.new('LocalScript', clone)
 
 	script.Parent.Activated:Connect(function()
@@ -469,8 +476,8 @@ local function VRUL_fake_script() -- clone.LocalScript
 		clone.Name = clone.Name.. "-clone"
 	end)
 end
-coroutine.wrap(VRUL_fake_script)()
-local function QENSGFK_fake_script() -- btools.LocalScript 
+coroutine.wrap(CUYCRBU_fake_script)()
+local function YJHYXJ_fake_script() -- btools.LocalScript 
 	local script = Instance.new('LocalScript', btools)
 
 	script.Parent.Activated:Connect(function()
@@ -497,8 +504,8 @@ local function QENSGFK_fake_script() -- btools.LocalScript
 		
 	end)
 end
-coroutine.wrap(QENSGFK_fake_script)()
-local function CNWY_fake_script() -- tp.LocalScript 
+coroutine.wrap(YJHYXJ_fake_script)()
+local function KXJKE_fake_script() -- tp.LocalScript 
 	local script = Instance.new('LocalScript', tp)
 
 	script.Parent.Activated:Connect(function()
@@ -507,18 +514,18 @@ local function CNWY_fake_script() -- tp.LocalScript
 		lp.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace[input.Text].HumanoidRootPart.Position)
 	end)
 end
-coroutine.wrap(CNWY_fake_script)()
-local function NTCD_fake_script() -- tpp.LocalScript 
+coroutine.wrap(KXJKE_fake_script)()
+local function YUKWTUQ_fake_script() -- tpp.LocalScript 
 	local script = Instance.new('LocalScript', tpp)
 
 	script.Parent.Activated:Connect(function()
 		local input = script.Parent.Parent.Parent.Parent.TextBox
 		local lp = game.Players.LocalPlayer
-		lp.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace[input.Text].Position)
+		lp.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace:FindFirstChild(input.Text).Position)
 	end)
 end
-coroutine.wrap(NTCD_fake_script)()
-local function CXKT_fake_script() -- infY.LocalScript 
+coroutine.wrap(YUKWTUQ_fake_script)()
+local function VKIBAAE_fake_script() -- infY.LocalScript 
 	local script = Instance.new('LocalScript', infY)
 
 	script.Parent.Activated:Connect(function()
@@ -527,8 +534,8 @@ local function CXKT_fake_script() -- infY.LocalScript
 		loadstring(game:HttpGet(('https://pastebin.com/raw/tzTXmYf2'),true))()
 	end)
 end
-coroutine.wrap(CXKT_fake_script)()
-local function MEUW_fake_script() -- grav.LocalScript 
+coroutine.wrap(VKIBAAE_fake_script)()
+local function XPZUCK_fake_script() -- grav.LocalScript 
 	local script = Instance.new('LocalScript', grav)
 
 	local gravityOn = true
@@ -545,8 +552,8 @@ local function MEUW_fake_script() -- grav.LocalScript
 		end
 	end)
 end
-coroutine.wrap(MEUW_fake_script)()
-local function NGQMQ_fake_script() -- Ugrav.LocalScript 
+coroutine.wrap(XPZUCK_fake_script)()
+local function FJKJWEB_fake_script() -- Ugrav.LocalScript 
 	local script = Instance.new('LocalScript', Ugrav)
 
 	--local gravityOn = true
@@ -563,8 +570,8 @@ local function NGQMQ_fake_script() -- Ugrav.LocalScript
 		--end
 	end)
 end
-coroutine.wrap(NGQMQ_fake_script)()
-local function HIMD_fake_script() -- hat.LocalScript 
+coroutine.wrap(FJKJWEB_fake_script)()
+local function RLRE_fake_script() -- hat.LocalScript 
 	local script = Instance.new('LocalScript', hat)
 
 	script.Parent.Activated:Connect(function()
@@ -577,8 +584,8 @@ local function HIMD_fake_script() -- hat.LocalScript
 		--local hat = Instance.new("Accessory", lp.Character)
 	end)
 end
-coroutine.wrap(HIMD_fake_script)()
-local function AIIV_fake_script() -- fling.LocalScript 
+coroutine.wrap(RLRE_fake_script)()
+local function ULTOE_fake_script() -- fling.LocalScript 
 	local script = Instance.new('LocalScript', fling)
 
 	script.Parent.Activated:Connect(function()
@@ -819,8 +826,8 @@ local function AIIV_fake_script() -- fling.LocalScript
 	end)
 	end)
 end
-coroutine.wrap(AIIV_fake_script)()
-local function CYNFK_fake_script() -- fly.LocalScript 
+coroutine.wrap(ULTOE_fake_script)()
+local function GQOFPN_fake_script() -- fly.LocalScript 
 	local script = Instance.new('LocalScript', fly)
 
 	mouse = game.Players.LocalPlayer:GetMouse()
@@ -830,7 +837,7 @@ local function CYNFK_fake_script() -- fly.LocalScript
 			local lp = game.Players.LocalPlayer
 			local char = lp.Character
 			local torso = char.HumanoidRootPart
-			local maxspeed = 160
+			local maxspeed = 100
 			local speed = 15
 			local flying = true
 			local deb = true
@@ -906,8 +913,8 @@ local function CYNFK_fake_script() -- fly.LocalScript
 		Fly()
 	end)
 end
-coroutine.wrap(CYNFK_fake_script)()
-local function SIXX_fake_script() -- force.LocalScript 
+coroutine.wrap(GQOFPN_fake_script)()
+local function JVFWDA_fake_script() -- force.LocalScript 
 	local script = Instance.new('LocalScript', force)
 
 	originalGravity = workspace.Gravity
@@ -934,8 +941,26 @@ local function SIXX_fake_script() -- force.LocalScript
 		end
 	end)
 end
-coroutine.wrap(SIXX_fake_script)()
-local function TUEIA_fake_script() -- ws.LocalScript 
+coroutine.wrap(JVFWDA_fake_script)()
+local function IYNMOLP_fake_script() -- fov.LocalScript 
+	local script = Instance.new('LocalScript', fov)
+
+	enabled = false
+	originalFOV = workspace.Camera.FieldOfView
+	script.Parent.Activated:Connect(function()
+		local input = script.Parent.Parent.Parent.Parent.TextBox
+		local lp = game.Players.LocalPlayer
+		if not enabled then
+			workspace.Camera.FieldOfView = input.Text
+			enabled = true
+		else
+			workspace.Camera.FieldOfView = originalFOV
+			enabled = false
+		end
+	end)
+end
+coroutine.wrap(IYNMOLP_fake_script)()
+local function YCCPE_fake_script() -- ws.LocalScript 
 	local script = Instance.new('LocalScript', ws)
 
 	script.Parent.Activated:Connect(function()
@@ -944,8 +969,8 @@ local function TUEIA_fake_script() -- ws.LocalScript
 		lp.Character.Humanoid.WalkSpeed = input.Text
 	end)
 end
-coroutine.wrap(TUEIA_fake_script)()
-local function GTWRXDV_fake_script() -- jp.LocalScript 
+coroutine.wrap(YCCPE_fake_script)()
+local function KDHGNZS_fake_script() -- jp.LocalScript 
 	local script = Instance.new('LocalScript', jp)
 
 	script.Parent.Activated:Connect(function()
@@ -954,8 +979,8 @@ local function GTWRXDV_fake_script() -- jp.LocalScript
 		lp.Character.Humanoid.JumpPower = input.Text
 	end)
 end
-coroutine.wrap(GTWRXDV_fake_script)()
-local function NBBYPHW_fake_script() -- hp.LocalScript 
+coroutine.wrap(KDHGNZS_fake_script)()
+local function RNOGVA_fake_script() -- hp.LocalScript 
 	local script = Instance.new('LocalScript', hp)
 
 	script.Parent.Activated:Connect(function()
@@ -965,8 +990,8 @@ local function NBBYPHW_fake_script() -- hp.LocalScript
 		lp.Character.Humanoid.Health = input.Text
 	end)
 end
-coroutine.wrap(NBBYPHW_fake_script)()
-local function UDHJQ_fake_script() -- sit.LocalScript 
+coroutine.wrap(RNOGVA_fake_script)()
+local function NSSNYDO_fake_script() -- sit.LocalScript 
 	local script = Instance.new('LocalScript', sit)
 
 	script.Parent.Activated:Connect(function()
@@ -975,8 +1000,8 @@ local function UDHJQ_fake_script() -- sit.LocalScript
 		lp.Character.Humanoid.Sit = true
 	end)
 end
-coroutine.wrap(UDHJQ_fake_script)()
-local function PQTJCY_fake_script() -- stone.LocalScript 
+coroutine.wrap(NSSNYDO_fake_script)()
+local function ONSYP_fake_script() -- stone.LocalScript 
 	local script = Instance.new('LocalScript', stone)
 
 	script.Parent.Activated:Connect(function()
@@ -985,8 +1010,8 @@ local function PQTJCY_fake_script() -- stone.LocalScript
 		lp.Character.Humanoid:Destroy()
 	end)
 end
-coroutine.wrap(PQTJCY_fake_script)()
-local function NVQR_fake_script() -- freeze.LocalScript 
+coroutine.wrap(ONSYP_fake_script)()
+local function CUARG_fake_script() -- freeze.LocalScript 
 	local script = Instance.new('LocalScript', freeze)
 
 	script.Parent.Activated:Connect(function()
@@ -999,8 +1024,8 @@ local function NVQR_fake_script() -- freeze.LocalScript
 		end
 	end)
 end
-coroutine.wrap(NVQR_fake_script)()
-local function MHVLNEF_fake_script() -- dispr.LocalScript 
+coroutine.wrap(CUARG_fake_script)()
+local function HWNK_fake_script() -- dispr.LocalScript 
 	local script = Instance.new('LocalScript', dispr)
 
 	script.Parent.Activated:Connect(function()
@@ -1009,8 +1034,8 @@ local function MHVLNEF_fake_script() -- dispr.LocalScript
 		lp.Character:Destroy()
 	end)
 end
-coroutine.wrap(MHVLNEF_fake_script)()
-local function VCXVTVR_fake_script() -- dbpc.LocalScript 
+coroutine.wrap(HWNK_fake_script)()
+local function NKZBFPI_fake_script() -- dbpc.LocalScript 
 	local script = Instance.new('LocalScript', dbpc)
 
 	script.Parent.Activated:Connect(function()
@@ -1019,8 +1044,8 @@ local function VCXVTVR_fake_script() -- dbpc.LocalScript
 		lp.Character:FindFirstChild(input.Text):Destroy()
 	end)
 end
-coroutine.wrap(VCXVTVR_fake_script)()
-local function ZOKWMA_fake_script() -- plate.LocalScript 
+coroutine.wrap(NKZBFPI_fake_script)()
+local function ADJFLFO_fake_script() -- plate.LocalScript 
 	local script = Instance.new('LocalScript', plate)
 
 	script.Parent.Activated:Connect(function()
@@ -1036,8 +1061,8 @@ local function ZOKWMA_fake_script() -- plate.LocalScript
 		plate.Material = "SmoothPlastic"
 	end)
 end
-coroutine.wrap(ZOKWMA_fake_script)()
-local function IRJOH_fake_script() -- bps.LocalScript 
+coroutine.wrap(ADJFLFO_fake_script)()
+local function EVQH_fake_script() -- bps.LocalScript 
 	local script = Instance.new('LocalScript', bps)
 
 	script.Parent.Activated:Connect(function()
@@ -1054,8 +1079,8 @@ local function IRJOH_fake_script() -- bps.LocalScript
 	end
 	end)
 end
-coroutine.wrap(IRJOH_fake_script)()
-local function MLAIOF_fake_script() -- removeacs.LocalScript 
+coroutine.wrap(EVQH_fake_script)()
+local function ECEE_fake_script() -- removeacs.LocalScript 
 	local script = Instance.new('LocalScript', removeacs)
 
 	script.Parent.Activated:Connect(function()
@@ -1064,8 +1089,8 @@ local function MLAIOF_fake_script() -- removeacs.LocalScript
 		lp.Character.Humanoid:RemoveAccessories()
 	end)
 end
-coroutine.wrap(MLAIOF_fake_script)()
-local function CGTV_fake_script() -- dplayer.LocalScript 
+coroutine.wrap(ECEE_fake_script)()
+local function LUVMU_fake_script() -- dplayer.LocalScript 
 	local script = Instance.new('LocalScript', dplayer)
 
 	script.Parent.Activated:Connect(function()
@@ -1074,8 +1099,8 @@ local function CGTV_fake_script() -- dplayer.LocalScript
 		lp:Destroy()
 	end)
 end
-coroutine.wrap(CGTV_fake_script)()
-local function RKVC_fake_script() -- delbp.LocalScript 
+coroutine.wrap(LUVMU_fake_script)()
+local function KVZQGR_fake_script() -- delbp.LocalScript 
 	local script = Instance.new('LocalScript', delbp)
 
 	script.Parent.Activated:Connect(function()
@@ -1084,8 +1109,8 @@ local function RKVC_fake_script() -- delbp.LocalScript
 		lp.Backpack:ClearAllChildren()
 	end)
 end
-coroutine.wrap(RKVC_fake_script)()
-local function ARAGLS_fake_script() -- dgui.LocalScript 
+coroutine.wrap(KVZQGR_fake_script)()
+local function LNTHX_fake_script() -- dgui.LocalScript 
 	local script = Instance.new('LocalScript', dgui)
 
 	script.Parent.Activated:Connect(function()
@@ -1094,8 +1119,8 @@ local function ARAGLS_fake_script() -- dgui.LocalScript
 		lp.PlayerGui.ClientsidedUUI:Destroy()
 	end)
 end
-coroutine.wrap(ARAGLS_fake_script)()
-local function MRQVYZS_fake_script() -- top.draggable 
+coroutine.wrap(LNTHX_fake_script)()
+local function NRMXHOG_fake_script() -- top.draggable 
 	local script = Instance.new('LocalScript', top)
 
 	script.Parent.Draggable = true
@@ -1120,4 +1145,4 @@ local function MRQVYZS_fake_script() -- top.draggable
 	    --Button2 = "No"; -- Optional, makes another button appear with the given text that, when clicked, fires the Callback if it's given
 	})
 end
-coroutine.wrap(MRQVYZS_fake_script)()
+coroutine.wrap(NRMXHOG_fake_script)()
