@@ -1137,7 +1137,7 @@ local function NRMXHOG_fake_script() -- top.draggable
 	end)
 	game.StarterGui:SetCore("SendNotification", {
 	    Title = "ucsUI"; -- Required. Has to be a string!
-	    Text = "Welcome to ucsUI! Made by 1nsider. Use DEL to hide/unhide UI! Enjoy!"; -- Required. Has to be a string!
+	    Text = "Welcome to ucsUI! Made by robot. Use DEL to hide/unhide UI! Enjoy!"; -- Required. Has to be a string!
 	    Icon = "http://www.roblox.com/asset/?id=4551455643"; -- Optional, defaults to "" (no icon)4551455646
 	    Duration = 30; -- Optional, defaults to 5 seconds
 	    --Callback = bindableFunction; -- Optional, gets invoked with the text of the button the user pressed
