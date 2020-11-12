@@ -1,4 +1,3 @@
 # ucsUI
-the Universal Client-sided UI, 
-developed by 1nsider, 
-built for Roblox.
+UCSui, a client-based ui for all sorts of things! free use for studio debugging and in-game abilities for admins
+\nhave fun!
